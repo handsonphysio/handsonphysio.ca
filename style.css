@@ -1,3 +1,154 @@
 body {
-  background: red !important;
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #f6f9fc;
+  color: #1c1c1c;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: white;
+  border-bottom: 1px solid #e8eef5;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: #0B4C7A;
+}
+
+.logo span {
+  color: #00A6B2;
+}
+
+.nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav a:hover {
+  color: #0B4C7A;
+}
+
+.btn {
+  padding: 10px 16px;
+  background: #0B4C7A;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #0B4C7A;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.hero {
+  background: linear-gradient(135deg, #0B4C7A, #00A6B2);
+  color: white;
+  padding: 120px 50px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-top: 20px;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.badges {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.section {
+  padding: 80px 50px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #0B4C7A;
+}
+
+.dark {
+  background: #eef4f9;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+.card.good {
+  border-left: 5px solid #00A6B2;
+}
+
+.card.bad {
+  border-left: 5px solid #d9534f;
+}
+
+.cta {
+  text-align: center;
+  padding: 90px 20px;
+  background: #0B4C7A;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #062c45;
+  color: white;
+}
+
+@media(max-width:768px){
+  .header{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero{
+    padding: 80px 20px;
+  }
+
+  .hero h1{
+    font-size: 34px;
+  }
 }
