@@ -5,7 +5,6 @@ body {
   color: #1c1c1c;
 }
 
-/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
@@ -15,7 +14,6 @@ body {
   border-bottom: 1px solid #e8eef5;
   position: sticky;
   top: 0;
-  z-index: 1000;
 }
 
 .logo {
@@ -34,10 +32,6 @@ body {
   color: #333;
 }
 
-.nav a:hover {
-  color: #0B4C7A;
-}
-
 .btn {
   padding: 10px 16px;
   background: #0B4C7A;
@@ -47,71 +41,43 @@ body {
   font-weight: 600;
 }
 
-/* HERO */
 .hero {
-  background: linear-gradient(135deg, #0B4C7A, #00A6B2);
-  color: white;
   padding: 120px 50px;
+  color: white;
+  background: linear-gradient(135deg, #0B4C7A, #00A6B2);
 }
 
 .hero-bg {
   background: linear-gradient(rgba(11,76,122,0.85), rgba(0,166,178,0.85)),
-  url('https://images.unsplash.com/photo-1580281657527-47f249e8f79f')
-  center/cover no-repeat;
+  url('https://images.unsplash.com/photo-1580281657527-47f249e8f79f') center/cover no-repeat;
 }
 
 .hero h1 {
   font-size: 52px;
-  margin: 0;
 }
 
 .hero h2 {
   font-size: 26px;
-  margin: 6px 0;
 }
 
 .hero p {
   max-width: 650px;
-  margin-top: 20px;
-  opacity: 0.95;
 }
 
-.hero-buttons {
-  margin-top: 25px;
-}
-
-/* BADGES */
-.badges {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  font-size: 14px;
-}
-
-/* SECTIONS */
 .section {
   padding: 80px 50px;
-}
-
-.section h2 {
-  font-size: 32px;
-  margin-bottom: 30px;
-  color: #0B4C7A;
 }
 
 .dark {
   background: #eef4f9;
 }
 
-/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-/* CARDS */
 .card {
   background: white;
   padding: 20px;
@@ -119,15 +85,9 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.05);
 }
 
-.card.good {
-  border-left: 5px solid #00A6B2;
-}
+.card.good { border-left: 5px solid #00A6B2; }
+.card.bad { border-left: 5px solid #d9534f; }
 
-.card.bad {
-  border-left: 5px solid #d9534f;
-}
-
-/* CTA */
 .cta {
   text-align: center;
   padding: 90px 20px;
@@ -135,7 +95,6 @@ body {
   color: white;
 }
 
-/* FOOTER */
 .footer {
   text-align: center;
   padding: 30px;
@@ -143,7 +102,6 @@ body {
   color: white;
 }
 
-/* STICKY BOOK BUTTON */
 .sticky-book {
   position: fixed;
   bottom: 20px;
@@ -152,28 +110,11 @@ body {
   color: white;
   padding: 14px 18px;
   border-radius: 50px;
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 600;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  z-index: 9999;
 }
 
 .sticky-book:hover {
   background: #00A6B2;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .header{
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero{
-    padding: 80px 20px;
-  }
-
-  .hero h1{
-    font-size: 34px;
-  }
 }
