@@ -844,3 +844,40 @@ body {
   }
 
 }
+/* PREMIUM GALLERY UPGRADE */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  height: 360px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 260px;
+  }
+}
