@@ -5,6 +5,7 @@ body {
   color: #1c1c1c;
 }
 
+/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
@@ -14,6 +15,7 @@ body {
   border-bottom: 1px solid #e8eef5;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -45,34 +47,31 @@ body {
   font-weight: 600;
 }
 
-.btn.primary {
-  background: #0B4C7A;
-}
-
-.btn.outline {
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-}
-
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #0B4C7A, #00A6B2);
   color: white;
   padding: 120px 50px;
 }
 
+.hero-bg {
+  background: linear-gradient(rgba(11,76,122,0.85), rgba(0,166,178,0.85)),
+  url('https://images.unsplash.com/photo-1580281657527-47f249e8f79f')
+  center/cover no-repeat;
+}
+
 .hero h1 {
-  font-size: 48px;
+  font-size: 52px;
   margin: 0;
 }
 
 .hero h2 {
-  font-size: 28px;
-  margin-top: 10px;
+  font-size: 26px;
+  margin: 6px 0;
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 650px;
   margin-top: 20px;
   opacity: 0.95;
 }
@@ -81,6 +80,7 @@ body {
   margin-top: 25px;
 }
 
+/* BADGES */
 .badges {
   margin-top: 20px;
   display: flex;
@@ -89,6 +89,7 @@ body {
   font-size: 14px;
 }
 
+/* SECTIONS */
 .section {
   padding: 80px 50px;
 }
@@ -103,12 +104,14 @@ body {
   background: #eef4f9;
 }
 
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
+/* CARDS */
 .card {
   background: white;
   padding: 20px;
@@ -124,6 +127,7 @@ body {
   border-left: 5px solid #d9534f;
 }
 
+/* CTA */
 .cta {
   text-align: center;
   padding: 90px 20px;
@@ -131,6 +135,7 @@ body {
   color: white;
 }
 
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 30px;
@@ -138,20 +143,7 @@ body {
   color: white;
 }
 
-@media(max-width:768px){
-  .header{
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero{
-    padding: 80px 20px;
-  }
-
-  .hero h1{
-    font-size: 34px;
-  }
-}
+/* STICKY BOOK BUTTON */
 .sticky-book {
   position: fixed;
   bottom: 20px;
@@ -168,4 +160,20 @@ body {
 
 .sticky-book:hover {
   background: #00A6B2;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .header{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero{
+    padding: 80px 20px;
+  }
+
+  .hero h1{
+    font-size: 34px;
+  }
 }
