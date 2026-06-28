@@ -1,93 +1,100 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f6f9fc;
+margin:0;
+font-family:Arial;
+background:#f6f9fc;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 18px 40px;
-  background: white;
-  position: sticky;
-  top: 0;
+display:flex;
+justify-content:space-between;
+padding:15px 40px;
+background:white;
 }
 
 .logo {
-  font-weight: bold;
-  color: #0B4C7A;
+font-weight:bold;
+color:#0B4C7A;
 }
 
-.logo span {
-  color: #00A6B2;
-}
+.logo span {color:#00A6B2;}
 
 .nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-}
-
-.btn {
-  background: #0B4C7A;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 6px;
-  text-decoration: none;
+margin:0 10px;
+text-decoration:none;
 }
 
 .hero {
-  padding: 100px 40px;
-  color: white;
-  background: linear-gradient(135deg, #0B4C7A, #00A6B2);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:60px;
+background:linear-gradient(135deg,#0B4C7A,#00A6B2);
+color:white;
 }
 
-.hero-bg {
-  background: linear-gradient(rgba(11,76,122,0.85), rgba(0,166,178,0.85)),
-  url('https://images.unsplash.com/photo-1580281657527-47f249e8f79f') center/cover;
+.hero-img {
+width:45%;
+border-radius:12px;
 }
 
 .section {
-  padding: 70px 40px;
-}
-
-.dark {
-  background: #eef4f9;
+padding:60px;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
+background:white;
+padding:15px;
+border-radius:10px;
+}
+
+.card img {
+width:100%;
+border-radius:10px;
+height:180px;
+object-fit:cover;
+}
+
+.insurance {
+padding:60px;
+text-align:center;
+background:#eef4f9;
+}
+
+.logos img {
+height:40px;
+margin:10px;
+filter:grayscale(100%);
 }
 
 .cta {
-  text-align: center;
-  padding: 80px;
-  background: #0B4C7A;
-  color: white;
+text-align:center;
+padding:60px;
+background:#0B4C7A;
+color:white;
 }
 
 .footer {
-  text-align: center;
-  padding: 30px;
-  background: #062c45;
-  color: white;
+padding:30px;
+text-align:center;
+background:#062c45;
+color:white;
 }
 
-.sticky-book {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #0B4C7A;
-  color: white;
-  padding: 14px 18px;
-  border-radius: 50px;
-  text-decoration: none;
+.btn {
+background:#0B4C7A;
+color:white;
+padding:10px 15px;
+text-decoration:none;
+border-radius:6px;
+}
+
+.secondary {
+background:white;
+color:#0B4C7A;
 }
