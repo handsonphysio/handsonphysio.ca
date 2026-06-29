@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hands-On Physiotherapy | One-on-One Care</title>
+  <title>Hands-On Physiotherapy | One-on-One Clinical Care</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     html { scroll-behavior: smooth; }
 
-    .fade-up {
-      animation: fadeUp 0.8s ease forwards;
+    .fade {
+      animation: fade 0.9s ease forwards;
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(18px);
     }
 
-    @keyframes fadeUp {
+    @keyframes fade {
       to {
         opacity: 1;
         transform: translateY(0);
@@ -24,8 +24,16 @@
     }
 
     .glass {
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px);
+    }
+
+    .card {
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
     }
   </style>
 </head>
@@ -34,16 +42,16 @@
 
 <!-- NAV -->
 <header class="fixed top-0 w-full z-50 glass border-b">
-  <div class="max-w-6xl mx-auto flex justify-between items-center px-5 py-3">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
 
-    <div class="font-bold text-lg">
+    <div class="font-bold text-lg tracking-tight">
       Hands-On Physio
     </div>
 
     <nav class="hidden md:flex gap-8 text-sm text-gray-700">
       <a href="#services">Services</a>
       <a href="#about">About</a>
-      <a href="#insurance">Insurance</a>
+      <a href="#results">Results</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -56,101 +64,48 @@
 </header>
 
 <!-- HERO -->
-<section class="pt-36 pb-28 text-center px-6 bg-gradient-to-b from-gray-50 to-white">
+<section class="pt-40 pb-28 px-6 bg-gradient-to-b from-gray-50 to-white">
 
-  <h1 class="text-5xl md:text-6xl font-bold leading-tight fade-up">
-    One-on-One Physiotherapy
-  </h1>
+  <div class="max-w-5xl mx-auto text-center">
 
-  <p class="mt-5 text-xl text-gray-600 fade-up">
-    Dedicated hands-on treatment — every session, every time
-  </p>
+    <h1 class="text-5xl md:text-6xl font-bold leading-tight fade">
+      One-on-One Physiotherapy<br/>
+      <span class="text-teal-600">Built Around You</span>
+    </h1>
 
-  <p class="mt-6 max-w-2xl mx-auto text-gray-500 fade-up">
-    Personalized physiotherapy focused on pain relief, mobility restoration,
-    and long-term recovery using evidence-based manual therapy.
-  </p>
-
-  <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center fade-up">
-
-    <a href="#book"
-       class="bg-teal-600 text-white px-7 py-3 rounded-full hover:bg-teal-700 transition">
-      Book Appointment
-    </a>
-
-    <a href="#services"
-       class="border border-gray-300 px-7 py-3 rounded-full hover:border-gray-500 transition">
-      View Services
-    </a>
-
-  </div>
-
-  <div class="mt-10 text-sm text-gray-500 fade-up">
-    ✔ Direct Billing &nbsp; | &nbsp; ✔ ICBC Accepted &nbsp; | &nbsp; ✔ Private Rooms
-  </div>
-
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="py-24 px-6 max-w-6xl mx-auto">
-
-  <h2 class="text-3xl font-bold text-center mb-12">
-    Services
-  </h2>
-
-  <div class="grid md:grid-cols-3 gap-6">
-
-    <div class="border rounded-2xl p-6 hover:shadow-md transition">
-      <h3 class="font-semibold text-lg">Manual Therapy</h3>
-      <p class="text-gray-600 mt-2 text-sm">
-        Hands-on joint and soft tissue treatment to reduce pain and improve mobility.
-      </p>
-    </div>
-
-    <div class="border rounded-2xl p-6 hover:shadow-md transition">
-      <h3 class="font-semibold text-lg">Sports Injury Rehab</h3>
-      <p class="text-gray-600 mt-2 text-sm">
-        Return-to-sport focused rehabilitation programs for athletes.
-      </p>
-    </div>
-
-    <div class="border rounded-2xl p-6 hover:shadow-md transition">
-      <h3 class="font-semibold text-lg">Post-Surgical Rehab</h3>
-      <p class="text-gray-600 mt-2 text-sm">
-        Structured recovery plans after orthopedic surgery.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="bg-gray-50 py-24 px-6">
-
-  <div class="max-w-4xl mx-auto text-center">
-
-    <h2 class="text-3xl font-bold">
-      About Our Clinic
-    </h2>
-
-    <p class="mt-6 text-gray-600 leading-relaxed">
-      Hands-On Physiotherapy is built around one principle:
-      <span class="font-semibold">quality one-on-one care matters.</span>
-      Every session is fully dedicated to your recovery with no distractions,
-      no overlapping patients, and no rushed treatments.
+    <p class="mt-6 text-xl text-gray-600 fade">
+      No double bookings. No distractions. Pure clinical attention.
     </p>
 
+    <p class="mt-6 text-gray-500 max-w-2xl mx-auto fade">
+      Evidence-based manual therapy, injury rehabilitation, and movement restoration
+      designed to deliver measurable recovery outcomes.
+    </p>
+
+    <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center fade">
+
+      <a href="#book"
+         class="bg-teal-600 text-white px-8 py-3 rounded-full hover:bg-teal-700 transition">
+        Book Assessment
+      </a>
+
+      <a href="#services"
+         class="border border-gray-300 px-8 py-3 rounded-full hover:border-gray-500 transition">
+        Explore Services
+      </a>
+
+    </div>
+
+    <div class="mt-10 text-sm text-gray-500 fade">
+      ✔ ICBC Accepted &nbsp; | &nbsp; ✔ Direct Billing &nbsp; | &nbsp; ✔ 1-on-1 Treatment Only
+    </div>
+
   </div>
 </section>
 
-<!-- INSURANCE -->
-<section id="insurance" class="py-20 overflow-hidden">
-
-  <h2 class="text-2xl font-bold text-center mb-10">
-    Extended Health Coverage
-  </h2>
-
-  <div class="flex gap-12 text-gray-400 text-sm animate-pulse whitespace-nowrap justify-center">
+<!-- TRUST BAR -->
+<section class="py-10 border-t border-b bg-white">
+  <div class="max-w-6xl mx-auto text-center text-gray-400 text-sm flex flex-wrap justify-center gap-10">
     <span>Sun Life</span>
     <span>Manulife</span>
     <span>Canada Life</span>
@@ -158,7 +113,84 @@
     <span>Green Shield</span>
     <span>Desjardins</span>
   </div>
+</section>
 
+<!-- SERVICES -->
+<section id="services" class="py-28 px-6 max-w-6xl mx-auto">
+
+  <h2 class="text-3xl font-bold text-center">
+    Clinical Services
+  </h2>
+
+  <p class="text-center text-gray-500 mt-3 max-w-2xl mx-auto">
+    Structured rehabilitation programs focused on measurable functional improvement.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-6 mt-14">
+
+    <div class="border rounded-2xl p-7 card">
+      <h3 class="font-semibold text-lg">Manual Therapy</h3>
+      <p class="text-gray-600 mt-2 text-sm">
+        Joint mobilization, soft tissue release, and pain modulation techniques.
+      </p>
+    </div>
+
+    <div class="border rounded-2xl p-7 card">
+      <h3 class="font-semibold text-lg">Sports Rehabilitation</h3>
+      <p class="text-gray-600 mt-2 text-sm">
+        Return-to-performance training and injury prevention systems.
+      </p>
+    </div>
+
+    <div class="border rounded-2xl p-7 card">
+      <h3 class="font-semibold text-lg">Post-Surgical Recovery</h3>
+      <p class="text-gray-600 mt-2 text-sm">
+        Structured phased rehabilitation after orthopedic procedures.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="bg-gray-50 py-28 px-6">
+
+  <div class="max-w-4xl mx-auto text-center">
+
+    <h2 class="text-3xl font-bold">Clinical Philosophy</h2>
+
+    <p class="mt-6 text-gray-600 leading-relaxed">
+      At Hands-On Physiotherapy, treatment is not volume-based — it is outcome-based.
+      Every session is dedicated entirely to one patient with focused manual therapy,
+      guided exercise prescription, and measurable progression tracking.
+    </p>
+
+  </div>
+</section>
+
+<!-- RESULTS / TRUST -->
+<section id="results" class="py-28 px-6 max-w-6xl mx-auto text-center">
+
+  <h2 class="text-3xl font-bold">Why Patients Choose Us</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 mt-14">
+
+    <div>
+      <p class="text-4xl font-bold text-teal-600">1:1</p>
+      <p class="text-gray-600 mt-2">No shared treatment sessions</p>
+    </div>
+
+    <div>
+      <p class="text-4xl font-bold text-teal-600">100%</p>
+      <p class="text-gray-600 mt-2">Focused therapist attention</p>
+    </div>
+
+    <div>
+      <p class="text-4xl font-bold text-teal-600">Fast</p>
+      <p class="text-gray-600 mt-2">Structured recovery planning</p>
+    </div>
+
+  </div>
 </section>
 
 <!-- BOOKING -->
@@ -169,7 +201,7 @@
   </h2>
 
   <p class="mt-4 text-white/80">
-    Book a one-on-one physiotherapy session
+    Book a dedicated one-on-one physiotherapy session
   </p>
 
   <a href="#"
@@ -180,7 +212,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-24 text-center px-6">
+<section id="contact" class="py-28 text-center px-6">
 
   <h2 class="text-3xl font-bold">Contact</h2>
 
@@ -192,7 +224,7 @@
 
 <!-- FLOAT BUTTON -->
 <a href="#book"
-   class="fixed bottom-5 right-5 bg-black text-white px-5 py-3 rounded-full shadow-lg">
+   class="fixed bottom-6 right-6 bg-black text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">
   Book
 </a>
 
