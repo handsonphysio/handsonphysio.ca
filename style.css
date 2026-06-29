@@ -9,15 +9,15 @@
 }
 
 /* =========================
-   THEME
+   DESIGN SYSTEM
 ========================= */
 
 :root {
   --navy: #0b1f3b;
   --black: #0a0a0a;
   --white: #ffffff;
-  --muted: #aab4c0;
-  --light: #f5f7fa;
+  --muted: #9aa8b6;
+  --soft: #f5f7fb;
 }
 
 /* =========================
@@ -32,8 +32,8 @@ body {
 }
 
 .container {
-  width: 88%;
-  max-width: 1100px;
+  width: 90%;
+  max-width: 1150px;
   margin: auto;
 }
 
@@ -45,29 +45,29 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(11,31,59,0.96);
-  backdrop-filter: blur(10px);
+  background: rgba(11,31,59,0.97);
+  backdrop-filter: blur(12px);
   z-index: 999;
 }
 
-.nav {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 75px;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 500;
+  height: 78px;
 }
 
 .logo {
   color: white;
   font-weight: 700;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.4px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 14px;
+  font-weight: 500;
 }
 
 .btn {
@@ -75,8 +75,8 @@ header {
   color: var(--navy);
   padding: 10px 18px;
   border-radius: 999px;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
 }
 
 /* =========================
@@ -89,7 +89,7 @@ header {
   align-items: center;
 
   background:
-    linear-gradient(rgba(10,10,10,0.75), rgba(11,31,59,0.65)),
+    linear-gradient(120deg, rgba(0,0,0,0.78), rgba(11,31,59,0.65)),
     url("images/clinic-2.webp");
 
   background-size: cover;
@@ -102,10 +102,15 @@ header {
   line-height: 1.05;
 }
 
-.sub {
-  margin-top: 15px;
+.hero p {
+  margin-top: 18px;
+  max-width: 650px;
   color: var(--muted);
-  max-width: 600px;
+}
+
+.hero .btn {
+  margin-top: 25px;
+  display: inline-block;
 }
 
 /* =========================
@@ -113,12 +118,16 @@ header {
 ========================= */
 
 .section {
-  padding: 100px 0;
+  padding: 110px 0;
+}
+
+.section.alt {
+  background: var(--soft);
 }
 
 .section-title {
-  font-size: 2rem;
-  margin-bottom: 30px;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
   color: var(--navy);
 }
 
@@ -133,10 +142,10 @@ header {
 }
 
 .card {
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 14px;
   background: white;
+  border: 1px solid #eee;
+  padding: 22px;
+  border-radius: 14px;
 }
 
 /* =========================
@@ -146,13 +155,14 @@ header {
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 18px;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 16px;
+  height: 280px;
   object-fit: cover;
+  border-radius: 16px;
 }
 
 /* =========================
@@ -169,7 +179,7 @@ iframe {
   width: 100%;
   height: 320px;
   border: none;
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
 /* =========================
@@ -180,7 +190,7 @@ footer {
   background: var(--navy);
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 30px;
 }
 
 /* =========================
@@ -195,7 +205,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .nav a {
+  .nav-links {
     display: none;
   }
 }
