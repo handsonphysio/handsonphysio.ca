@@ -95,3 +95,29 @@ section {
         flex-direction: column;
     }
 }
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+.appointment .btn {
+    white-space: nowrap;
+}
+.appointment-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.appointment-action {
+    flex-shrink: 0;
+}
+@media (max-width: 900px) {
+    .appointment-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
