@@ -946,13 +946,8 @@ grid-template-columns:1fr;
 
 grid-template-columns:1fr;
 
-}
-
-.appointment-box{
-
-flex-direction:column;
-text-align:center;
-
+.appointment-box {
+    flex-wrap: wrap;
 }
 
 }
