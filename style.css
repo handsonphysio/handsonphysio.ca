@@ -1,10 +1,16 @@
-/* style.css */
+/* =========================
+   RESET
+========================= */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* =========================
+   ROOT COLORS
+========================= */
 
 :root {
   --primary: #0d5c63;
@@ -14,6 +20,10 @@
   --text: #4b5563;
   --white: #ffffff;
 }
+
+/* =========================
+   GLOBAL
+========================= */
 
 html {
   scroll-behavior: smooth;
@@ -27,15 +37,15 @@ body {
   overflow-x: hidden;
 }
 
-/* CONTAINER */
-
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .header {
   position: fixed;
@@ -92,7 +102,9 @@ body {
   font-weight: 600;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   position: relative;
@@ -114,7 +126,7 @@ body {
     linear-gradient(
       to right,
       rgba(0,0,0,0.75),
-      rgba(0,0,0,0.3)
+      rgba(0,0,0,0.35)
     );
 }
 
@@ -171,7 +183,9 @@ body {
   color: white;
 }
 
-/* SECTION */
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
   padding: 110px 0;
@@ -183,6 +197,7 @@ body {
 
 .section-heading {
   margin-bottom: 4rem;
+  text-align: center;
 }
 
 .section-label {
@@ -198,9 +213,12 @@ body {
   font-size: clamp(2.2rem, 4vw, 4rem);
   line-height: 1.1;
   max-width: 850px;
+  margin: auto;
 }
 
-/* FEATURES */
+/* =========================
+   FEATURES
+========================= */
 
 .features-grid {
   display: grid;
@@ -225,7 +243,9 @@ body {
   color: var(--text);
 }
 
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
 
 .services-grid {
   display: grid;
@@ -244,22 +264,27 @@ body {
   font-weight: 600;
 }
 
-/* GALLERY */
+/* =========================
+   SMALL PREMIUM GALLERY
+========================= */
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .gallery-card {
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: 22px;
 
   box-shadow:
-    0 12px 30px rgba(0,0,0,0.08);
+    0 8px 20px rgba(0,0,0,0.06);
 
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 8;
 }
 
 .gallery-card img {
@@ -269,14 +294,16 @@ body {
 
   display: block;
 
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
 .gallery-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-grid {
   display: grid;
@@ -306,7 +333,9 @@ body {
     0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
   background: #0f172a;
@@ -331,7 +360,9 @@ body {
   padding: 1.5rem 0;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 900px) {
 
@@ -356,6 +387,14 @@ body {
   .features-grid,
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    max-width: 100%;
+  }
+
+  .gallery-card {
+    aspect-ratio: 16 / 10;
   }
 
   .hero {
