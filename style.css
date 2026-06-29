@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 *{
 margin:0;
 padding:0;
@@ -20,11 +23,13 @@ margin:auto;
 
 }
 
-header{
-
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 header .container{
@@ -86,7 +91,14 @@ color:#183153;
 font-weight:500;
 
 }
+.btn {
+    transition: all 0.3s ease;
+}
 
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
 .btn{
 
 background:#00a8b5;
@@ -301,7 +313,9 @@ padding:90px 0;
 background:#f7f9fc;
 
 }
-
+section {
+    padding: 100px 0;
+}
 .section-title{
 
 text-align:center;
@@ -941,4 +955,45 @@ text-align:center;
 
 }
 
+}
+.card-hover {
+    transition: 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title,
+.testimonial,
+.logo-card,
+.service,
+.contact-grid > div {
+    animation: fadeUp 0.8s ease both;
+}
+h1, h2 {
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+.appointment .btn {
+    background: #fff;
+    color: #00a8b5;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 50px;
 }
