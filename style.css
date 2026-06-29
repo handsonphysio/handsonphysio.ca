@@ -437,3 +437,223 @@ font-size:34px;
 }
 
 }
+/* ================= ABOUT ================= */
+
+.about{
+
+padding:100px 0;
+background:#fff;
+
+}
+
+.about-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+
+}
+
+.about-image{
+
+position:relative;
+
+}
+
+.about-image img{
+
+width:100%;
+border-radius:20px;
+display:block;
+
+}
+
+.experience{
+
+position:absolute;
+
+bottom:30px;
+left:30px;
+
+background:#00a8b5;
+color:#fff;
+
+padding:25px 35px;
+
+border-radius:15px;
+
+text-align:center;
+
+}
+
+.experience h2{
+
+font-size:46px;
+
+}
+
+.small-title{
+
+color:#00a8b5;
+font-weight:700;
+letter-spacing:2px;
+
+}
+
+.about-content h2{
+
+font-size:42px;
+margin:15px 0 25px;
+
+}
+
+.about-content p{
+
+line-height:1.9;
+color:#666;
+margin-bottom:30px;
+
+}
+
+.about-list{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-bottom:35px;
+
+}
+
+.about-list div{
+
+font-weight:500;
+
+}
+
+.about-list i{
+
+color:#00a8b5;
+margin-right:10px;
+
+}
+
+/* ================= STATS ================= */
+
+.stats{
+
+padding:80px 0;
+
+background:#08203d;
+
+}
+
+.stats-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+
+}
+
+.stat{
+
+text-align:center;
+color:#fff;
+
+}
+
+.stat h2{
+
+font-size:52px;
+margin-bottom:10px;
+
+color:#00c8d7;
+
+}
+
+/* ================= WHY ================= */
+
+.why{
+
+padding:100px 0;
+background:#f7f9fc;
+
+}
+
+.why-grid{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+}
+
+.why-card{
+
+background:#fff;
+padding:40px 30px;
+border-radius:20px;
+
+text-align:center;
+
+transition:.3s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+}
+
+.why-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.why-card i{
+
+font-size:45px;
+color:#00a8b5;
+margin-bottom:20px;
+
+}
+
+.why-card h3{
+
+margin-bottom:15px;
+
+}
+
+.why-card p{
+
+color:#666;
+line-height:1.8;
+
+}
+
+@media(max-width:900px){
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.stats-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.about-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
