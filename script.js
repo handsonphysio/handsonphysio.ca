@@ -1,14 +1,15 @@
 
-/* MOBILE MENU TOGGLE */
-
-function toggleMenu() {
+/* MOBILE MENU */
+function toggleMenu(){
   document.querySelector(".nav-links").classList.toggle("show");
 }
 
-/* CLOSE MENU ON CLICK */
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.querySelector(".nav-links").classList.remove("show");
+/* SCROLL ANIMATION */
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".card").forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("fade-up");
+    }
   });
 });
