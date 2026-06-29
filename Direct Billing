@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Direct Billing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">Hands-On Physio</div>
+    <a class="btn" href="https://janeapp.com">Book Now</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+
+    <h2 class="section-title">Direct Billing</h2>
+
+    <div class="card">
+      We offer direct billing for ICBC, WorkSafeBC, and most extended health insurance providers.
+    </div>
+
+    <br>
+
+    <div class="card">
+      Please bring your claim details to your appointment for seamless processing.
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
