@@ -985,3 +985,14 @@ p {
     line-height: 1.7;
     color: #555;
 }
+.appointment-text {
+    flex: 1;
+}
+
+.appointment-action {
+    flex-shrink: 0;
+}
+
+.appointment .btn {
+    white-space: nowrap;
+}
