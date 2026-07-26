@@ -242,3 +242,66 @@ footer { background: #fff; }
   .button { padding: 15px 16px; }
   .button-label small { font-size: 11px; }
 }
+
+/* Future-clinic interface layer */
+:root { --silver: #d8d8d4; --signal: #f7f7f5; }
+body { background: var(--signal); }
+.site-header { box-shadow: 0 1px 0 rgba(8,8,8,.08), 0 12px 35px rgba(8,8,8,.035); }
+nav a { position: relative; padding: 8px 0; letter-spacing: -.02em; }
+nav a::after { position: absolute; right: 0; bottom: 1px; left: 0; height: 1px; background: currentColor; content: ""; opacity: 0; transform: scaleX(.2); transform-origin: left; transition: opacity .2s ease, transform .2s ease; }
+nav a:hover::after, nav a[aria-current="page"]::after { opacity: 1; transform: scaleX(1); }
+nav a:hover, nav a[aria-current="page"] { text-decoration: none; }
+
+.hero { isolation: isolate; background-color: var(--signal); background-image: linear-gradient(rgba(8,8,8,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(8,8,8,.055) 1px, transparent 1px); background-size: 38px 38px; }
+.hero::before { position: absolute; z-index: -1; inset: 0; background: linear-gradient(108deg, rgba(255,255,255,.94) 0 44%, rgba(255,255,255,.5) 60%, transparent 74%); content: ""; }
+.hero::after { background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px), radial-gradient(circle at 34px 34px, #fff 0 4px, transparent 4.6px); background-size: 30px 30px, 30px 30px, auto; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; padding: 8px 10px; border: 1px solid currentColor; background: rgba(255,255,255,.78); box-shadow: 4px 4px 0 rgba(8,8,8,.09); }
+.eyebrow::before { width: 6px; height: 6px; border-radius: 50%; background: currentColor; content: ""; }
+.intro-band .eyebrow, .services .eyebrow, .statement .eyebrow { background: transparent; }
+
+.button, .start-booking { position: relative; overflow: hidden; isolation: isolate; box-shadow: 7px 7px 0 var(--silver); letter-spacing: -.02em; }
+.button::before, .start-booking::before { position: absolute; z-index: -1; inset: 0; background: var(--white); content: ""; transform: translateX(-102%); transition: transform .28s cubic-bezier(.2,.8,.2,1); }
+.button:hover::before, .start-booking:hover::before { transform: translateX(0); }
+.button:hover, .start-booking:hover { color: var(--black); box-shadow: 2px 2px 0 var(--silver); transform: translate(-2px,-2px); }
+.text-link { position: relative; width: fit-content; }
+.text-link::after { position: absolute; right: 0; bottom: -5px; left: 0; height: 1px; background: currentColor; content: ""; transform: scaleX(.26); transform-origin: left; transition: transform .2s ease; }
+.text-link:hover { text-decoration: none; }
+.text-link:hover::after { transform: scaleX(1); }
+
+.start, .billing, .visit { background-image: linear-gradient(135deg, rgba(8,8,8,.035) 25%, transparent 25%, transparent 50%, rgba(8,8,8,.035) 50%, rgba(8,8,8,.035) 75%, transparent 75%); background-size: 12px 12px; }
+.step { position: relative; overflow: hidden; transition: color .25s ease, background .25s ease, transform .25s ease, box-shadow .25s ease; }
+.step::after { position: absolute; top: 18px; right: 18px; width: 8px; height: 8px; border-radius: 50%; background: var(--black); content: ""; opacity: .14; }
+.step:hover { background: var(--black); color: var(--white); box-shadow: 9px 9px 0 var(--silver); transform: translate(-3px,-3px); }
+.step:hover > span { background: var(--white); color: var(--black); }
+
+.service-item { position: relative; overflow: hidden; box-shadow: 0 0 0 0 var(--black); transition: color .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
+.service-item::before { position: absolute; inset: 0; background: var(--black); content: ""; transform: translateY(101%); transition: transform .32s cubic-bezier(.2,.8,.2,1); }
+.service-item > * { position: relative; z-index: 1; }
+.service-item:hover { color: var(--white); box-shadow: 8px 8px 0 var(--silver); transform: translate(-3px,-3px); }
+.service-item:hover::before { transform: translateY(0); }
+.service-item:hover .service-icon { border-color: var(--white); transform: rotate(-8deg); }
+.service-icon { transition: transform .25s ease, border-color .25s ease; }
+.service-index { display: flex; justify-content: space-between; }
+.service-index::after { content: "SYSTEM / READY"; font-size: 10px; letter-spacing: .08em; opacity: .55; }
+
+.statement { position: relative; overflow: hidden; background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,.16) 0 1px, transparent 1.5px), radial-gradient(circle at 12% 85%, rgba(255,255,255,.12) 0 1px, transparent 1.5px); background-size: 28px 28px, 36px 36px; }
+.statement p { text-wrap: balance; }
+.billing-copy, .billing-partners, .visit-copy, .contact-card { position: relative; }
+.logo-marquee { box-shadow: 8px 8px 0 rgba(8,8,8,.15); }
+.provider-logo { background-image: linear-gradient(135deg, transparent 0 45%, rgba(8,8,8,.04) 45% 46%, transparent 46% 100%); }
+.faq details { transition: background .2s ease, padding .2s ease; }
+.faq details:hover { background: var(--gray); padding-inline: 14px; }
+.faq details[open] { padding-inline: 14px; background: var(--black); color: var(--white); }
+.faq details[open] p a { color: var(--white); }
+.map-frame { box-shadow: 8px 8px 0 rgba(8,8,8,.14); }
+.contact-card { background-image: linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px); background-size: 24px 24px; }
+.floating-top { border-radius: 50%; }
+
+@media (max-width: 760px) {
+  .hero { background-size: 26px 26px; }
+  nav a::after { display: none; }
+  .eyebrow { padding: 7px 8px; font-size: 11px; }
+  .start, .billing, .visit { background-size: 10px 10px; }
+  .service-index::after { display: none; }
+  .step:hover, .service-item:hover { box-shadow: 4px 4px 0 var(--silver); transform: none; }
+}
