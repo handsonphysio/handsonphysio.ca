@@ -176,6 +176,7 @@ body { background: #fff; color: var(--black); }
 h1 { max-width: 100%; font-size: clamp(54px, 6.4vw, 104px); line-height: .96; }
 .hero-intro { max-width: 530px; font-size: 18px; }
 .hero-motto { display: none; }
+.mobile-motto { display: none; }
 .text-link, .scroll-note { color: var(--black); }
 .scroll-note { bottom: 30px; }
 .button { box-shadow: 6px 6px 0 var(--gray); }
@@ -314,8 +315,53 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: none; }
   .button::before, .start-booking::before { display: none; }
   .button:hover, .start-booking:hover { color: var(--white); box-shadow: 7px 7px 0 var(--silver); transform: none; }
   .hero { padding-bottom: 238px; }
-  .hero::after { display: flex; width: 100%; height: 190px; padding: 28px 10vw; align-items: center; justify-content: flex-start; content: "ONE\A PATIENT\A AT A TIME"; font: 800 clamp(22px, 6vw, 28px)/1.13 Manrope, Arial, sans-serif; letter-spacing: -.02em; text-align: left; text-shadow: none; white-space: pre; }
-  .scroll-note { z-index: 3; }
+  .hero::after { display: block; width: 100%; height: 190px; padding: 0; content: ""; }
+  .mobile-motto { position: absolute; z-index: 4; bottom: 55px; left: 10vw; display: flex; margin: 0; flex-direction: column; gap: 1px; color: var(--white); font: 800 clamp(22px, 6vw, 28px)/1.08 Manrope, Arial, sans-serif; letter-spacing: -.02em; pointer-events: none; }
+  .mobile-motto span { display: block; }
+  .scroll-note { z-index: 5; }
   .logo-marquee { overflow: hidden; }
   .logo-track { animation: partner-scroll 36s linear infinite; }
+}
+
+/* Static virtual clinic assistant */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.assistant-launch { position: fixed; right: 84px; bottom: 20px; z-index: 45; display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 16px; border: 1px solid var(--black); border-radius: 999px; background: var(--white); color: var(--black); box-shadow: 5px 5px 0 var(--black); font: 800 13px/1 Manrope, Arial, sans-serif; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+.assistant-launch:hover { box-shadow: 2px 2px 0 var(--black); transform: translate(2px,2px); }
+.assistant-pulse { position: relative; display: block; width: 8px; height: 8px; border-radius: 50%; background: #18a558; }
+.assistant-pulse::after { position: absolute; inset: -4px; border: 1px solid #18a558; border-radius: inherit; content: ""; opacity: .7; animation: assistant-pulse 1.8s ease-out infinite; }
+.assistant-panel { position: fixed; right: 20px; bottom: 82px; z-index: 65; display: grid; width: min(390px, calc(100vw - 32px)); max-height: min(650px, calc(100svh - 110px)); grid-template-rows: auto minmax(110px, 1fr) auto auto auto; overflow: hidden; visibility: hidden; border: 1px solid var(--black); background: var(--white); box-shadow: 12px 12px 0 var(--black); opacity: 0; pointer-events: none; transform: translateY(16px) scale(.98); transform-origin: bottom right; transition: opacity .22s ease, transform .22s ease, visibility 0s linear .22s; }
+.assistant-panel.is-open { visibility: visible; opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); transition-delay: 0s; }
+.assistant-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 18px 18px 16px; border-bottom: 1px solid var(--black); background: var(--black); color: var(--white); }
+.assistant-kicker { margin: 0 0 7px; font: 500 10px/1 "DM Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
+.assistant-header h2 { margin: 0; font-size: 27px; letter-spacing: -.055em; line-height: 1; }
+.assistant-close { display: grid; width: 32px; height: 32px; place-items: center; padding: 0; border: 1px solid rgba(255,255,255,.6); border-radius: 50%; background: transparent; color: var(--white); font-size: 24px; line-height: 1; cursor: pointer; }
+.assistant-close:hover { background: var(--white); color: var(--black); }
+.assistant-messages { display: grid; align-content: start; gap: 10px; min-height: 134px; padding: 16px; overflow: auto; background-image: linear-gradient(rgba(8,8,8,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(8,8,8,.055) 1px, transparent 1px); background-size: 22px 22px; }
+.assistant-message { max-width: 92%; padding: 12px 13px; border: 1px solid var(--black); background: var(--white); font-size: 14px; line-height: 1.48; }
+.assistant-message--guide { border-left-width: 5px; }
+.assistant-message--user { justify-self: end; background: var(--black); color: var(--white); }
+.assistant-message a { display: inline-block; margin-top: 8px; font-weight: 800; color: inherit; text-underline-offset: 3px; }
+.assistant-actions { display: flex; gap: 8px; padding: 12px 16px; overflow-x: auto; border-top: 1px solid var(--black); background: var(--gray); }
+.assistant-actions button { flex: 0 0 auto; padding: 9px 10px; border: 1px solid var(--black); background: var(--white); color: var(--black); font: 800 12px/1 Manrope, Arial, sans-serif; cursor: pointer; }
+.assistant-actions button:hover { background: var(--black); color: var(--white); }
+.assistant-form { display: grid; grid-template-columns: 1fr 44px; border-top: 1px solid var(--black); }
+.assistant-form input { min-width: 0; padding: 14px 15px; border: 0; background: var(--white); color: var(--black); font: 500 14px/1.25 Manrope, Arial, sans-serif; }
+.assistant-form input:focus { outline: 3px solid var(--black); outline-offset: -3px; }
+.assistant-form button { border: 0; border-left: 1px solid var(--black); background: var(--black); color: var(--white); font-size: 21px; cursor: pointer; }
+.assistant-form button:hover { background: #353535; }
+.assistant-note { margin: 0; padding: 11px 16px; border-top: 1px solid var(--black); background: var(--white); color: var(--muted); font: 500 10px/1.35 "DM Mono", monospace; }
+@keyframes assistant-pulse { 70%, 100% { opacity: 0; transform: scale(1.6); } }
+
+@media (max-width: 760px) {
+  .assistant-launch { right: 76px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 80; min-height: 46px; padding-inline: 15px; border-color: var(--black); background: var(--black); color: var(--white); box-shadow: 4px 4px 0 var(--white); }
+  .assistant-panel { right: 16px; bottom: calc(76px + env(safe-area-inset-bottom)); z-index: 90; width: calc(100vw - 32px); max-height: min(620px, calc(100svh - 90px)); box-shadow: 7px 7px 0 var(--black); }
+  .assistant-header { padding: 16px; }
+  .assistant-header h2 { font-size: 25px; }
+  .assistant-messages { min-height: 118px; padding: 13px; }
+  .assistant-actions { padding: 10px 13px; }
+  .assistant-pulse::after { animation: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .assistant-launch, .assistant-panel { transition: none; }
+  .assistant-pulse::after { animation: none; }
 }

@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=10">
   <script src="script.js" defer></script>
   <script type="application/ld+json">
   {
@@ -173,6 +173,7 @@
         </div>
         <p class="hero-motto">ONE PATIENT AT A TIME</p>
       </div>
+      <p class="mobile-motto" aria-hidden="true"><span>ONE</span><span>PATIENT</span><span>AT A TIME</span></p>
       <a class="scroll-note" href="#approach">Scroll to explore <span>↓</span></a>
     </section>
 
@@ -338,6 +339,35 @@
     <a href="#top" class="to-top">Back to top ↑</a>
   </footer>
   <a class="floating-top" href="#top" aria-label="Back to top">↑</a>
+  <button class="assistant-launch" type="button" aria-expanded="false" aria-controls="clinic-assistant">
+    <span class="assistant-pulse" aria-hidden="true"></span>
+    <span>Ask Hands-On</span>
+    <span aria-hidden="true">↗</span>
+  </button>
+  <section class="assistant-panel" id="clinic-assistant" role="dialog" aria-modal="false" aria-labelledby="assistant-title" aria-hidden="true">
+    <header class="assistant-header">
+      <div>
+        <p class="assistant-kicker">Hands-On Assistant</p>
+        <h2 id="assistant-title">How can we help?</h2>
+      </div>
+      <button class="assistant-close" type="button" aria-label="Close assistant">×</button>
+    </header>
+    <div class="assistant-messages" aria-live="polite" aria-label="Assistant messages">
+      <div class="assistant-message assistant-message--guide">Hi — I can help you book, find the clinic, understand direct billing, or explore services.</div>
+    </div>
+    <div class="assistant-actions" aria-label="Common questions">
+      <button type="button" data-assistant-action="book">Book a visit</button>
+      <button type="button" data-assistant-action="billing">Direct billing</button>
+      <button type="button" data-assistant-action="location">Find us</button>
+      <button type="button" data-assistant-action="services">Services</button>
+    </div>
+    <form class="assistant-form">
+      <label class="sr-only" for="assistant-question">Ask a clinic question</label>
+      <input id="assistant-question" name="question" type="text" autocomplete="off" placeholder="Ask about booking, billing or location…">
+      <button type="submit" aria-label="Send question">↑</button>
+    </form>
+    <p class="assistant-note">For general clinic information only — please don’t share personal health details here. For urgent concerns, call 911.</p>
+  </section>
   <p class="toast" role="status" aria-live="polite"></p>
 </body>
 </html>
