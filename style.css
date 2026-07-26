@@ -1,7 +1,7 @@
 :root { --black: #080808; --white: #fff; --gray: #f1f1ef; --line: #cfcfcb; --muted: #565656; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--white); color: var(--black); font-family: Manrope, Arial, sans-serif; }
+body { overflow-x: hidden; margin: 0; background: var(--white); color: var(--black); font-family: Manrope, Arial, sans-serif; }
 a { color: inherit; }
 ::selection { background: var(--black); color: var(--white); }
 :focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
@@ -34,8 +34,8 @@ nav a:hover, nav a[aria-current="page"], .to-top:hover { text-decoration: underl
 .hero-copy { position: relative; z-index: 1; width: min(810px, 100%); }
 .eyebrow { margin: 0 0 23px; font: 500 13px/1 "DM Mono", monospace; letter-spacing: .1em; text-transform: uppercase; }
 h1, h2, h3, p { margin-top: 0; }
-h1, h2 { letter-spacing: -.075em; }
-h1 { max-width: 900px; margin-bottom: 30px; font-size: clamp(67px, 9.4vw, 150px); line-height: .82; }
+h1, h2 { letter-spacing: -.055em; }
+h1 { max-width: 900px; margin-bottom: 30px; font-size: clamp(60px, 8.4vw, 132px); line-height: .96; }
 em { font-family: Georgia, serif; font-weight: 400; }
 .hero-intro { max-width: 540px; margin-bottom: 34px; font-size: 18px; line-height: 1.65; }
 .hero-actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -47,7 +47,7 @@ em { font-family: Georgia, serif; font-weight: 400; }
 
 .intro-band { padding: clamp(90px, 12vw, 165px) 5vw; background: var(--black); color: var(--white); }
 .intro-layout { display: grid; grid-template-columns: 1.25fr .65fr; gap: 10vw; align-items: end; }
-h2 { margin-bottom: 0; font-size: clamp(48px, 6.3vw, 94px); line-height: .9; }
+h2 { margin-bottom: 0; font-size: clamp(48px, 6.3vw, 94px); line-height: 1; }
 .intro-layout > p { margin-bottom: 4px; font-size: 18px; line-height: 1.7; }
 
 .start, .services, .billing, .faq, .visit { padding: clamp(80px, 11vw, 150px) 5vw; }
@@ -77,14 +77,15 @@ h2 { margin-bottom: 0; font-size: clamp(48px, 6.3vw, 94px); line-height: .9; }
 .service-item.reveal:nth-child(3), .step.reveal:nth-child(3) { transition-delay: .16s; }
 
 .statement { padding: clamp(95px, 13vw, 205px) 5vw; background: var(--gray); }
-.statement p { max-width: 1160px; margin: 0; font-size: clamp(39px, 5vw, 80px); font-weight: 800; letter-spacing: -.07em; line-height: 1; }
+.statement p { max-width: 1160px; margin: 0; font-size: clamp(39px, 5vw, 80px); font-weight: 800; letter-spacing: -.055em; line-height: 1.08; }
 
-.billing { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(45px, 9vw, 140px); align-items: center; }
+.billing { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(45px, 9vw, 140px); align-items: center; }
+.billing-copy, .billing-partners { min-width: 0; }
 .billing h2 { margin-bottom: 24px; }
 .billing-copy > p:not(.eyebrow) { max-width: 490px; margin-bottom: 25px; font-size: 17px; line-height: 1.7; }
 .billing-link { display: inline-flex; padding-bottom: 5px; border-bottom: 2px solid var(--black); }
 .partner-label { margin: 0 0 16px; color: var(--muted); font: 500 12px/1 "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
-.logo-marquee { overflow: hidden; border: 1px solid var(--black); background: var(--black); }
+.logo-marquee { overflow: hidden; width: 100%; max-width: 100%; border: 1px solid var(--black); background: var(--black); }
 .logo-track { display: flex; width: max-content; animation: partner-scroll 28s linear infinite; }
 .logo-marquee:hover .logo-track { animation-play-state: paused; }
 .provider-logo { display: inline-grid; min-width: 172px; min-height: 112px; padding: 25px 20px; place-content: center; border-right: 1px solid #444; color: var(--white); font: 700 16px/.9 Manrope, Arial, sans-serif; letter-spacing: -.07em; text-align: center; white-space: nowrap; }
@@ -151,7 +152,7 @@ footer p { margin: 0; font: 500 12px/1 "DM Mono", monospace; }
   .hero-intro { font-size: 17px; }
   .hero-motto { right: 18px; bottom: 23px; width: 47vw; font-size: 14px; }
   .scroll-note { bottom: 25px; font-size: 11px; }
-  .intro-layout, .billing, .faq, .visit { grid-template-columns: 1fr; gap: 38px; }
+  .intro-layout, .billing, .faq, .visit { grid-template-columns: minmax(0, 1fr); gap: 38px; }
   .section-heading { display: block; margin-bottom: 42px; }
   .section-heading .eyebrow { margin-bottom: 20px; writing-mode: initial; transform: none; }
   .button-booking { width: 100%; min-width: 0; }
@@ -170,9 +171,9 @@ body { background: #fff; color: var(--black); }
 .site-header { min-height: 112px; background: rgba(255,255,255,.98); color: var(--black); border-bottom: 1px solid var(--black); }
 .full-header-logo { width: 92px; height: 92px; }
 .hero { display: flex; align-items: center; min-height: 720px; padding: 100px 46% 112px 5vw; background: #fff; color: var(--black); border-bottom: 1px solid var(--black); }
-.hero::after { top: 0; right: 0; bottom: 0; display: flex; width: 39%; height: auto; padding: 48px 38px; align-items: flex-end; background: radial-gradient(circle at 34px 34px, #fff 0 4px, transparent 4.6px), var(--black); box-shadow: inset 1px 0 rgba(255,255,255,.28); content: "ONE\A PATIENT\A AT A\A TIME"; color: #fff; font: 800 clamp(40px, 5.3vw, 82px)/.84 Manrope, Arial, sans-serif; letter-spacing: -.115em; text-shadow: 2px 2px 0 #363636; white-space: pre; }
+.hero::after { top: 0; right: 0; bottom: 0; display: flex; width: 39%; height: auto; padding: 48px 38px; align-items: flex-end; background: radial-gradient(circle at 34px 34px, #fff 0 4px, transparent 4.6px), var(--black); box-shadow: inset 1px 0 rgba(255,255,255,.28); content: "ONE\A PATIENT\A AT A\A TIME"; color: #fff; font: 800 clamp(40px, 5.3vw, 82px)/.98 Manrope, Arial, sans-serif; letter-spacing: -.075em; text-shadow: 2px 2px 0 #363636; white-space: pre; }
 .hero-copy { width: min(760px, 100%); }
-h1 { font-size: clamp(64px, 8.3vw, 132px); line-height: .84; }
+h1 { max-width: 100%; font-size: clamp(54px, 6.4vw, 104px); line-height: .96; }
 .hero-intro { max-width: 530px; font-size: 18px; }
 .hero-motto { display: none; }
 .text-link, .scroll-note { color: var(--black); }
@@ -209,15 +210,19 @@ footer { background: #fff; }
 
 @media (max-width: 900px) {
   .hero { min-height: 650px; padding-right: 43%; }
-  .hero::after { width: 36%; padding: 32px 22px; font-size: clamp(32px, 5vw, 48px); }
+  .hero::after { width: 36%; padding: 32px 22px; font-size: clamp(30px, 4.6vw, 46px); }
+  h1 { font-size: clamp(48px, 6.8vw, 68px); }
 }
 @media (max-width: 760px) {
   .site-header { min-height: 82px; }
   .full-header-logo { width: 65px; height: 72px; }
-  .hero { min-height: calc(100svh - 82px); padding: 78px 5vw 125px; }
-  .hero::after { top: auto; width: 100%; height: 165px; padding: 20px 5vw; align-items: flex-end; content: "ONE PATIENT\A AT A TIME"; font-size: clamp(34px, 10vw, 54px); line-height: .84; }
+  .hero { align-items: flex-start; min-height: calc(100svh - 82px); padding: 58px 5vw 225px; }
+  .hero::after { top: auto; width: 100%; height: 178px; padding: 22px 8vw; align-items: center; justify-content: flex-start; content: "ONE PATIENT\A AT A TIME"; font-size: clamp(24px, 6.5vw, 34px); line-height: 1.08; letter-spacing: -.025em; }
   .hero-copy { width: 100%; }
-  .scroll-note { bottom: 24px; }
+  h1 { font-size: clamp(42px, 13vw, 64px); line-height: 1; }
+  .hero-intro { font-size: 16px; line-height: 1.55; }
+  .hero-actions { gap: 18px; }
+  .scroll-note { bottom: 20px; color: var(--white); }
   .intro-layout { grid-template-columns: 1fr; }
   .steps-list { gap: 12px; }
   .step, .step:last-child { border-right: 1px solid var(--black); }
@@ -231,76 +236,9 @@ footer { background: #fff; }
   .service-list { grid-template-columns: 1fr; }
   .service-item { min-height: 300px; }
 }
-
-
-
-/* Larger hero motto and four service cards */
-.hero {
-  display: flex;
-  align-items: center;
-  min-height: 720px;
-  padding: 100px 46% 112px 5vw;
-  background: #fff;
-  color: var(--black);
-  border-bottom: 1px solid var(--black);
-}
-.hero::after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  width: 39%;
-  height: auto;
-  padding: 48px 38px;
-  align-items: flex-end;
-  background: radial-gradient(circle at 34px 34px, #fff 0 4px, transparent 4.6px), var(--black);
-  box-shadow: inset 1px 0 rgba(255,255,255,.28);
-  content: "ONE\A PATIENT\A AT A\A TIME";
-  color: #fff;
-  font: 800 clamp(40px, 5.3vw, 82px)/.84 Manrope, Arial, sans-serif;
-  letter-spacing: -.115em;
-  text-shadow: 2px 2px 0 #363636;
-  white-space: pre;
-}
-.service-list { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
-.service-item {
-  grid-template-columns: 1fr;
-  min-height: 372px;
-  padding: 30px;
-  border: 1px solid var(--black);
-  background: #fff;
-  color: var(--black);
-}
-.service-icon {
-  width: 62px;
-  height: 62px;
-  padding: 9px;
-  border: 1px solid var(--black);
-  border-radius: 50%;
-}
-.service-item h3 { margin-bottom: 14px; font-size: clamp(24px, 2.1vw, 30px); }
-
-@media (max-width: 1050px) {
-  .service-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 900px) {
-  .hero { min-height: 650px; padding-right: 43%; }
-  .hero::after { width: 36%; padding: 32px 22px; font-size: clamp(32px, 5vw, 48px); }
-}
-@media (max-width: 760px) {
-  .hero { min-height: calc(100svh - 82px); padding: 78px 5vw 125px; }
-  .hero::after {
-    top: auto;
-    width: 100%;
-    height: 165px;
-    padding: 20px 5vw;
-    align-items: flex-end;
-    content: "ONE PATIENT\A AT A TIME";
-    font-size: clamp(34px, 10vw, 54px);
-    line-height: .84;
-  }
-}
-@media (max-width: 640px) {
-  .service-list { grid-template-columns: 1fr; }
-  .service-item { min-height: 300px; }
+@media (max-width: 380px) {
+  .hero { padding-top: 42px; }
+  h1 { font-size: clamp(39px, 12.5vw, 48px); }
+  .button { padding: 15px 16px; }
+  .button-label small { font-size: 11px; }
 }
