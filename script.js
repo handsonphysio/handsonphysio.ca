@@ -123,7 +123,7 @@
       action: { href: 'https://www.google.com/maps/search/?api=1&query=Unit+203%2C+8268+120+Street%2C+Surrey%2C+BC+V3W+3N4', label: 'Get directions ↗', external: true }
     },
     services: {
-      text: 'We offer physiotherapy, dry needling / IMS, exercise therapy and cupping therapy. Your physiotherapist can discuss which options suit your needs.',
+      text: 'We offer physiotherapy, dry needling / IMS, exercise therapy, cupping therapy and shockwave therapy. Your physiotherapist can discuss which options suit your needs.',
       action: { href: '#services', label: 'Explore services' }
     },
     contact: {
@@ -145,7 +145,7 @@
       : /book|appointment|schedule|jane/.test(value) ? 'book'
       : /bill|benefit|insurance|coverage|claim/.test(value) ? 'billing'
       : /address|location|directions|parking|where/.test(value) ? 'location'
-      : /service|treatment|physio|needl|ims|exercise|cupping/.test(value) ? 'services'
+      : /service|treatment|physio|needl|ims|exercise|cupping|shockwave/.test(value) ? 'services'
       : /call|phone|email|contact/.test(value) ? 'contact' : 'default';
     const reply = assistantReplies[key];
     addAssistantMessage(reply.text, false, reply.action);
