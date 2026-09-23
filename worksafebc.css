@@ -1,0 +1,1407 @@
+/* =========================================================
+   HANDS-ON PHYSIO
+   WORKSAFEBC PAGE
+   ========================================================= */
+
+.worksafebc-page .site-header {
+  position: sticky;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.ws-hero {
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.25fr)
+    minmax(300px, .75fr);
+
+  min-height: 690px;
+
+  padding:
+    90px
+    5vw
+    110px;
+
+  background: var(--gray);
+
+  border-bottom:
+    1px solid var(--black);
+
+}
+
+
+.ws-hero::before {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+
+    linear-gradient(
+      rgba(8,8,8,.055) 1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(8,8,8,.055) 1px,
+      transparent 1px
+    );
+
+  background-size: 30px 30px;
+
+  content: "";
+
+  pointer-events: none;
+
+}
+
+
+.ws-hero-copy {
+
+  position: relative;
+
+  z-index: 2;
+
+  align-self: center;
+
+  max-width: 820px;
+
+}
+
+
+.ws-status {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin:
+    0
+    0
+    28px;
+
+  padding:
+    9px
+    12px;
+
+  border:
+    1px solid var(--black);
+
+  background:
+    var(--white);
+
+  font:
+    500 11px/1
+    "DM Mono",
+    monospace;
+
+  letter-spacing: .06em;
+
+  text-transform: uppercase;
+
+}
+
+
+.ws-status span {
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #18a558;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(24,165,88,.12);
+
+}
+
+
+.ws-hero h1 {
+
+  max-width: 760px;
+
+  margin-bottom: 28px;
+
+  font-size:
+    clamp(
+      60px,
+      7.3vw,
+      112px
+    );
+
+}
+
+
+.ws-lead {
+
+  max-width: 650px;
+
+  margin-bottom: 34px;
+
+  font-size: 19px;
+
+  line-height: 1.65;
+
+}
+
+
+.ws-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 24px;
+
+  flex-wrap: wrap;
+
+}
+
+
+.ws-hero-panel {
+
+  position: relative;
+
+  z-index: 2;
+
+  align-self: stretch;
+
+  display: flex;
+
+  min-height: 490px;
+
+  margin-left: 5vw;
+
+  padding: 42px 38px;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  background: var(--black);
+
+  color: var(--white);
+
+  box-shadow:
+    12px 12px 0 #bdbdbd;
+
+}
+
+
+.ws-hero-panel::before {
+
+  position: absolute;
+
+  top: 30px;
+
+  left: 30px;
+
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: var(--white);
+
+  content: "";
+
+  box-shadow:
+    24px 0 var(--white),
+    48px 0 var(--white);
+
+}
+
+
+.ws-hero-panel span {
+
+  font:
+    800
+    clamp(42px,5vw,76px)/.92
+    Manrope,
+    Arial,
+    sans-serif;
+
+  letter-spacing: -.08em;
+
+}
+
+
+.ws-hero-panel small {
+
+  margin-top: 30px;
+
+  color: #bbb;
+
+  font:
+    500 12px/1
+    "DM Mono",
+    monospace;
+
+  letter-spacing: .08em;
+
+}
+
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.ws-intro {
+
+  padding:
+    clamp(90px,12vw,155px)
+    5vw;
+
+  background: var(--black);
+
+  color: var(--white);
+
+}
+
+
+.ws-intro-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    .8fr;
+
+  gap: 10vw;
+
+  align-items: end;
+
+}
+
+
+.ws-intro h2 {
+
+  max-width: 850px;
+
+}
+
+
+.ws-intro-grid > div p {
+
+  max-width: 600px;
+
+  margin:
+    0
+    0
+    18px;
+
+  color: #ddd;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+
+}
+
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.ws-section,
+.ws-claim,
+.ws-billing,
+.ws-return,
+.ws-faq,
+.ws-location {
+
+  padding:
+    clamp(80px,11vw,145px)
+    5vw;
+
+}
+
+
+.ws-section-head {
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr;
+
+  gap: 55px;
+
+  align-items: start;
+
+  margin-bottom: 65px;
+
+}
+
+
+.ws-section-head .eyebrow {
+
+  writing-mode:
+    vertical-rl;
+
+  transform:
+    rotate(180deg);
+
+  margin: 0;
+
+}
+
+
+.ws-section-head h2 {
+
+  max-width: 900px;
+
+}
+
+
+
+/* =========================================================
+   INJURY CARDS
+   ========================================================= */
+
+.ws-card-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 16px;
+
+}
+
+
+.ws-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 275px;
+
+  padding: 28px;
+
+  border:
+    1px solid var(--black);
+
+  background:
+    var(--white);
+
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    color .22s ease,
+    background .22s ease;
+
+}
+
+
+.ws-card::after {
+
+  position: absolute;
+
+  right: 20px;
+
+  top: 20px;
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--black);
+
+  opacity: .18;
+
+  content: "";
+
+}
+
+
+.ws-card:hover {
+
+  transform:
+    translate(-3px,-3px);
+
+  box-shadow:
+    8px 8px 0 #bdbdbd;
+
+  background:
+    var(--black);
+
+  color:
+    var(--white);
+
+}
+
+
+.ws-card span {
+
+  display: grid;
+
+  width: 38px;
+
+  height: 38px;
+
+  margin-bottom: 62px;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    var(--black);
+
+  color:
+    var(--white);
+
+  font:
+    500 12px/1
+    "DM Mono",
+    monospace;
+
+}
+
+
+.ws-card h3 {
+
+  margin-bottom: 12px;
+
+  font-size: 26px;
+
+  letter-spacing: -.05em;
+
+}
+
+
+.ws-card p {
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+}
+
+
+
+/* =========================================================
+   REHABILITATION PROCESS
+   ========================================================= */
+
+.ws-process {
+
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  gap: 10vw;
+
+  padding:
+    clamp(85px,11vw,150px)
+    5vw;
+
+  background:
+    var(--gray);
+
+  border-top:
+    1px solid var(--black);
+
+  border-bottom:
+    1px solid var(--black);
+
+}
+
+
+.ws-process-copy h2 {
+
+  margin-bottom: 28px;
+
+}
+
+
+.ws-process-copy >
+p:not(.eyebrow) {
+
+  max-width: 500px;
+
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+}
+
+
+.ws-process-list {
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+
+  border-top:
+    1px solid var(--black);
+
+}
+
+
+.ws-process-list li {
+
+  display: grid;
+
+  grid-template-columns:
+    54px
+    1fr;
+
+  gap: 24px;
+
+  padding:
+    28px 0;
+
+  border-bottom:
+    1px solid var(--black);
+
+}
+
+
+.ws-process-list li > span {
+
+  display: grid;
+
+  width: 40px;
+
+  height: 40px;
+
+  place-items: center;
+
+  border:
+    1px solid var(--black);
+
+  border-radius: 50%;
+
+  font:
+    500 11px/1
+    "DM Mono",
+    monospace;
+
+}
+
+
+.ws-process-list h3 {
+
+  margin:
+    0
+    0
+    8px;
+
+  font-size: 25px;
+
+  letter-spacing: -.05em;
+
+}
+
+
+.ws-process-list p {
+
+  max-width: 600px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+}
+
+
+
+/* =========================================================
+   CLAIM INFORMATION
+   ========================================================= */
+
+.ws-claim {
+
+  display: grid;
+
+  grid-template-columns:
+    .75fr
+    1.25fr;
+
+  gap: 10vw;
+
+  background:
+    var(--white);
+
+}
+
+
+.ws-claim h2 {
+
+  margin-bottom: 0;
+
+}
+
+
+.ws-claim-box {
+
+  border-top:
+    1px solid var(--black);
+
+}
+
+
+.ws-claim-item {
+
+  display: grid;
+
+  grid-template-columns:
+    48px
+    1fr;
+
+  gap: 20px;
+
+  padding:
+    23px 0;
+
+  border-bottom:
+    1px solid var(--black);
+
+}
+
+
+.ws-claim-item > strong {
+
+  font:
+    500 12px/1
+    "DM Mono",
+    monospace;
+
+}
+
+
+.ws-claim-item h3 {
+
+  margin:
+    0
+    0
+    7px;
+
+  font-size: 21px;
+
+  letter-spacing: -.04em;
+
+}
+
+
+.ws-claim-item p {
+
+  max-width: 650px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+}
+
+
+
+/* =========================================================
+   BILLING
+   ========================================================= */
+
+.ws-billing {
+
+  display: grid;
+
+  grid-template-columns:
+    .85fr
+    1.15fr;
+
+  gap: 10vw;
+
+  align-items: start;
+
+  background:
+    var(--gray);
+
+}
+
+
+.ws-billing h2 {
+
+  margin-bottom: 25px;
+
+}
+
+
+.ws-billing-main >
+p:not(.eyebrow) {
+
+  max-width: 600px;
+
+  margin-bottom: 25px;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+}
+
+
+.ws-billing-note {
+
+  border:
+    1px solid var(--black);
+
+  background:
+    var(--white);
+
+}
+
+
+.ws-check {
+
+  display: grid;
+
+  grid-template-columns:
+    48px
+    1fr;
+
+  gap: 18px;
+
+  padding: 25px;
+
+  border-bottom:
+    1px solid var(--black);
+
+}
+
+
+.ws-check:last-child {
+
+  border-bottom: 0;
+
+}
+
+
+.ws-check > span {
+
+  display: grid;
+
+  width: 32px;
+
+  height: 32px;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background:
+    var(--black);
+
+  color:
+    var(--white);
+
+  font-weight: 800;
+
+}
+
+
+.ws-check p {
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+}
+
+
+
+/* =========================================================
+   RETURN TO WORK
+   ========================================================= */
+
+.ws-return {
+
+  display: grid;
+
+  grid-template-columns:
+    220px
+    1fr;
+
+  gap: 8vw;
+
+  background:
+    var(--black);
+
+  color:
+    var(--white);
+
+}
+
+
+.ws-return-mark {
+
+  align-self: start;
+
+  padding: 20px;
+
+  border:
+    1px solid #666;
+
+  font:
+    800
+    clamp(55px,7vw,105px)/.85
+    Manrope,
+    Arial,
+    sans-serif;
+
+  letter-spacing:
+    -.09em;
+
+}
+
+
+.ws-return h2 {
+
+  margin-bottom: 28px;
+
+}
+
+
+.ws-return p:not(.eyebrow) {
+
+  max-width: 760px;
+
+  color: #ddd;
+
+  font-size: 17px;
+
+  line-height: 1.75;
+
+}
+
+
+.ws-return .text-link {
+
+  color:
+    var(--white);
+
+  margin-top: 8px;
+
+}
+
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.ws-faq {
+
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  gap: 10vw;
+
+  background:
+    var(--white);
+
+}
+
+
+.ws-faq .faq-list {
+
+  border-top:
+    1px solid var(--black);
+
+}
+
+
+.ws-faq details {
+
+  border-bottom:
+    1px solid var(--black);
+
+}
+
+
+.ws-faq summary {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding:
+    24px 0;
+
+  cursor: pointer;
+
+  font-size:
+    clamp(18px,2vw,25px);
+
+  font-weight: 800;
+
+  letter-spacing:
+    -.05em;
+
+  list-style: none;
+
+}
+
+
+.ws-faq summary::-webkit-details-marker {
+
+  display: none;
+
+}
+
+
+.ws-faq summary span {
+
+  font:
+    400 28px/1
+    Georgia,
+    serif;
+
+  transition:
+    transform .2s ease;
+
+}
+
+
+.ws-faq details[open]
+summary span {
+
+  transform:
+    rotate(45deg);
+
+}
+
+
+.ws-faq details p {
+
+  max-width: 700px;
+
+  margin:
+    -2px
+    0
+    26px;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+}
+
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.ws-cta {
+
+  padding:
+    clamp(90px,13vw,170px)
+    5vw;
+
+  background:
+    var(--gray);
+
+  border-top:
+    1px solid var(--black);
+
+  text-align: center;
+
+}
+
+
+.ws-cta .eyebrow {
+
+  margin-bottom: 25px;
+
+}
+
+
+.ws-cta h2 {
+
+  max-width: 1000px;
+
+  margin:
+    0
+    auto
+    40px;
+
+}
+
+
+.ws-cta-actions {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 28px;
+
+  flex-wrap: wrap;
+
+}
+
+
+.ws-call {
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+}
+
+
+.ws-call:hover {
+
+  text-decoration: underline;
+
+  text-underline-offset: 5px;
+
+}
+
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.ws-location {
+
+  display: grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  gap: 10vw;
+
+  background:
+    var(--white);
+
+}
+
+
+.ws-location h2 {
+
+  margin-bottom: 28px;
+
+}
+
+
+.ws-location address {
+
+  margin:
+    0
+    0
+    8px;
+
+  font-style: normal;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+}
+
+
+.ws-location .map-frame {
+
+  min-height: 360px;
+
+  margin-top: 0;
+
+}
+
+
+.ws-location .map-frame iframe {
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 360px;
+
+  border: 0;
+
+  display: block;
+
+}
+
+
+
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .ws-hero {
+
+    grid-template-columns: 1fr;
+
+    min-height: 0;
+
+    gap: 45px;
+
+  }
+
+
+  .ws-hero-panel {
+
+    min-height: 360px;
+
+    margin-left: 0;
+
+  }
+
+
+  .ws-card-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+
+  .ws-process,
+  .ws-claim,
+  .ws-billing,
+  .ws-faq,
+  .ws-location {
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+  }
+
+
+  .ws-return {
+
+    grid-template-columns:
+      130px
+      1fr;
+
+    gap: 45px;
+
+  }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .ws-hero {
+
+    padding:
+      65px
+      5vw
+      80px;
+
+  }
+
+
+  .ws-hero h1 {
+
+    font-size:
+      clamp(53px,15vw,86px);
+
+  }
+
+
+  .ws-lead {
+
+    font-size: 17px;
+
+  }
+
+
+  .ws-hero-panel {
+
+    min-height: 300px;
+
+    padding: 30px;
+
+    box-shadow:
+      7px 7px 0 #bdbdbd;
+
+  }
+
+
+  .ws-hero-panel span {
+
+    font-size:
+      clamp(42px,13vw,70px);
+
+  }
+
+
+  .ws-intro-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+
+  }
+
+
+  .ws-section-head {
+
+    display: block;
+
+    margin-bottom: 42px;
+
+  }
+
+
+  .ws-section-head .eyebrow {
+
+    writing-mode: initial;
+
+    transform: none;
+
+    margin-bottom: 20px;
+
+  }
+
+
+  .ws-card-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .ws-card {
+
+    min-height: 0;
+
+  }
+
+
+  .ws-card span {
+
+    margin-bottom: 45px;
+
+  }
+
+
+  .ws-process-list li {
+
+    grid-template-columns:
+      42px
+      1fr;
+
+    gap: 14px;
+
+  }
+
+
+  .ws-return {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+  .ws-return-mark {
+
+    width: fit-content;
+
+  }
+
+
+  .ws-cta-actions {
+
+    align-items: stretch;
+
+    flex-direction: column;
+
+  }
+
+
+  .ws-call {
+
+    padding: 15px;
+
+    border:
+      1px solid var(--black);
+
+  }
+
+
+  .ws-location .map-frame,
+  .ws-location .map-frame iframe {
+
+    min-height: 300px;
+
+  }
+
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ws-card {
+
+    transition: none;
+
+  }
+
+}
