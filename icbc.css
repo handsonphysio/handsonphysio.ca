@@ -1,0 +1,744 @@
+/* =========================================================
+   HANDS-ON PHYSIO
+   ICBC PHYSIOTHERAPY PAGE
+   ========================================================= */
+
+.icbc-page {
+  background: var(--white);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.icbc-hero {
+  background: var(--black);
+  color: var(--white);
+  padding: 110px 0 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.icbc-hero::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -220px;
+  top: -220px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+}
+
+.icbc-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 70px;
+  align-items: center;
+}
+
+.icbc-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.icbc-hero .eyebrow {
+  color: #b7ff00;
+  margin-bottom: 24px;
+}
+
+.icbc-hero h1 {
+  font-size: clamp(48px, 7vw, 92px);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  margin: 0 0 30px;
+  max-width: 900px;
+}
+
+.icbc-hero-lead {
+  max-width: 680px;
+  font-size: 20px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 38px;
+}
+
+.icbc-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.icbc-hero .button {
+  background: #b7ff00;
+  color: #000;
+}
+
+.icbc-hero .button:hover {
+  background: #fff;
+}
+
+.icbc-hero .button-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+.icbc-hero .button-secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+.icbc-trust-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 60px;
+  max-width: 720px;
+}
+
+.icbc-trust-item {
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 15px;
+}
+
+.icbc-trust-item strong {
+  display: block;
+  color: #b7ff00;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.icbc-trust-item span {
+  display: block;
+  margin-top: 7px;
+  color: rgba(255,255,255,0.62);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   HERO PANEL
+   ========================================================= */
+
+.icbc-hero-panel {
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 38px;
+  background: rgba(255,255,255,0.035);
+  backdrop-filter: blur(5px);
+}
+
+.icbc-panel-label {
+  color: #b7ff00;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-bottom: 35px;
+}
+
+.icbc-panel-title {
+  font-size: 38px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 25px;
+}
+
+.icbc-hero-panel p {
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+}
+
+.icbc-panel-line {
+  height: 2px;
+  background: #b7ff00;
+  margin: 30px 0 18px;
+}
+
+.icbc-hero-panel > span {
+  font-family: "DM Mono", monospace;
+  color: rgba(255,255,255,0.65);
+  font-size: 10px;
+  letter-spacing: 0.07em;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.icbc-intro {
+  padding: 100px 0;
+}
+
+.icbc-intro .section-heading {
+  max-width: 850px;
+}
+
+.icbc-intro h2,
+.icbc-section h2,
+.icbc-one-on-one h2,
+.icbc-return-grid h2,
+.icbc-cta h2,
+.icbc-location h2 {
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  margin: 12px 0 25px;
+}
+
+.icbc-intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--gray);
+}
+
+
+/* =========================================================
+   ONE ON ONE
+   ========================================================= */
+
+.icbc-one-on-one {
+  padding: 0 0 100px;
+}
+
+.icbc-feature-box {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+  padding: 60px;
+  background: #f2f2f2;
+  border-left: 5px solid #b7ff00;
+}
+
+.icbc-feature-box h2 {
+  margin-top: 12px;
+}
+
+.icbc-feature-box p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.icbc-section {
+  padding: 110px 0;
+}
+
+.icbc-light-section {
+  background: #f6f6f6;
+}
+
+.icbc-section .section-heading {
+  max-width: 800px;
+  margin-bottom: 55px;
+}
+
+.icbc-section .eyebrow {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.icbc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: #ddd;
+  border: 2px solid #ddd;
+}
+
+.icbc-card {
+  background: #fff;
+  padding: 38px;
+  min-height: 270px;
+}
+
+.icbc-card-number {
+  display: block;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+.icbc-card h3 {
+  font-size: 24px;
+  margin: 0 0 15px;
+  letter-spacing: -0.025em;
+}
+
+.icbc-card p {
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* =========================================================
+   DARK SECTION
+   ========================================================= */
+
+.icbc-dark-section {
+  background: #050505;
+  color: #fff;
+}
+
+.icbc-dark-section .eyebrow {
+  color: #b7ff00;
+}
+
+.icbc-dark-section h2 {
+  color: #fff;
+}
+
+.icbc-process {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.icbc-process-step {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 35px;
+  padding: 38px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.icbc-process-step > span {
+  color: #b7ff00;
+  font-family: "DM Mono", monospace;
+  font-size: 13px;
+}
+
+.icbc-process-step h3 {
+  margin: 0 0 10px;
+  font-size: 26px;
+}
+
+.icbc-process-step p {
+  max-width: 650px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* =========================================================
+   COVERAGE
+   ========================================================= */
+
+.icbc-coverage {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.icbc-coverage-main p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #555;
+}
+
+.icbc-coverage-side {
+  border: 1px solid #ddd;
+  padding: 35px;
+}
+
+.icbc-coverage-stat {
+  padding: 25px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.icbc-coverage-stat:first-child {
+  padding-top: 0;
+}
+
+.icbc-coverage-stat strong {
+  display: block;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.icbc-coverage-stat span {
+  display: block;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.icbc-coverage-note {
+  padding-top: 25px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #111;
+  font-weight: 700;
+  border-bottom: 2px solid #b7ff00;
+  padding-bottom: 4px;
+}
+
+.text-link:hover {
+  border-color: #111;
+}
+
+
+/* =========================================================
+   WHAT TO BRING
+   ========================================================= */
+
+.icbc-bring-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.icbc-bring-item {
+  background: #fff;
+  padding: 32px;
+  border: 1px solid #ddd;
+}
+
+.icbc-bring-item span {
+  display: block;
+  font-family: "DM Mono", monospace;
+  color: #777;
+  font-size: 11px;
+  margin-bottom: 35px;
+}
+
+.icbc-bring-item h3 {
+  font-size: 21px;
+  margin: 0 0 12px;
+}
+
+.icbc-bring-item p {
+  color: #666;
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RETURN TO ACTIVITY
+   ========================================================= */
+
+.icbc-return-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+}
+
+.icbc-return-grid p {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+
+.icbc-faq {
+  border-top: 1px solid #ccc;
+}
+
+.icbc-faq details {
+  border-bottom: 1px solid #ccc;
+  padding: 0;
+}
+
+.icbc-faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 28px 0;
+  font-size: 20px;
+  font-weight: 700;
+  padding-right: 45px;
+  position: relative;
+}
+
+.icbc-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.icbc-faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 24px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.icbc-faq details[open] summary::after {
+  content: "−";
+}
+
+.icbc-faq p {
+  max-width: 850px;
+  color: #666;
+  line-height: 1.8;
+  padding: 0 0 28px;
+  margin: 0;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.icbc-cta {
+  background: #b7ff00;
+  color: #000;
+  padding: 85px 0;
+}
+
+.icbc-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.icbc-cta .eyebrow {
+  color: #000;
+}
+
+.icbc-cta h2 {
+  max-width: 750px;
+  margin-bottom: 15px;
+}
+
+.icbc-cta p {
+  font-size: 18px;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.icbc-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.icbc-cta .button {
+  background: #000;
+  color: #fff;
+}
+
+.icbc-cta .button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.icbc-cta .button-secondary {
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.icbc-cta .button-secondary:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.icbc-location {
+  padding: 100px 0;
+}
+
+.icbc-location-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 60px;
+  align-items: stretch;
+}
+
+.icbc-location p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.icbc-location a {
+  color: inherit;
+}
+
+.icbc-map {
+  min-height: 420px;
+}
+
+.icbc-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+  filter: grayscale(100%);
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
+
+.main-nav a.active {
+  position: relative;
+}
+
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 2px;
+  background: #b7ff00;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .icbc-hero-grid,
+  .icbc-coverage,
+  .icbc-return-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icbc-hero-panel {
+    max-width: 600px;
+  }
+
+  .icbc-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .icbc-bring-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .icbc-location-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  .icbc-hero {
+    padding: 75px 0 65px;
+  }
+
+  .icbc-hero h1 {
+    font-size: 48px;
+  }
+
+  .icbc-hero-lead {
+    font-size: 17px;
+  }
+
+  .icbc-trust-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 45px;
+  }
+
+  .icbc-hero-panel {
+    padding: 28px;
+  }
+
+  .icbc-panel-title {
+    font-size: 31px;
+  }
+
+  .icbc-intro,
+  .icbc-section,
+  .icbc-location {
+    padding: 70px 0;
+  }
+
+  .icbc-feature-box {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 35px 25px;
+  }
+
+  .icbc-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icbc-card {
+    min-height: auto;
+  }
+
+  .icbc-process-step {
+    grid-template-columns: 50px 1fr;
+    gap: 15px;
+  }
+
+  .icbc-bring-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icbc-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icbc-location-grid {
+    gap: 35px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .icbc-page *,
+  .icbc-page *::before,
+  .icbc-page *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+}
+
+/* ICBC HEADER LOGO — FINAL */
+.icbc-page .site-header .site-logo { display:flex !important; align-items:center !important; width:180px !important; max-width:180px !important; height:56px !important; max-height:56px !important; overflow:hidden !important; flex:0 0 180px !important; }
+.icbc-page .site-header .site-logo img { display:block !important; width:180px !important; max-width:180px !important; height:auto !important; max-height:48px !important; object-fit:contain !important; }
+@media (max-width:760px) { .icbc-page .site-header .site-logo { width:145px !important; max-width:145px !important; height:48px !important; max-height:48px !important; flex-basis:145px !important; } .icbc-page .site-header .site-logo img { width:145px !important; max-width:145px !important; max-height:40px !important; } }
