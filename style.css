@@ -402,3 +402,21 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: none; }
 .new-service { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; width: fit-content; margin: -8px 0 30px; padding: 12px 14px; border: 1px solid var(--black); background: var(--white); font-size: 14px; font-weight: 800; line-height: 1.5; text-decoration: none; }
 .new-service > span:first-child { font: 500 10px/1.4 "DM Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
 .new-service:hover { background: var(--black); color: var(--white); }
+
+/* Keep the clinic's main services reachable from every main header. */
+.site-header { gap: clamp(16px, 2vw, 35px); }
+#primary-navigation { gap: clamp(14px, 1.8vw, 30px); }
+#primary-navigation a { white-space: nowrap; }
+@media (max-width: 1100px) {
+  .site-header { grid-template-columns: auto auto; min-height: 82px; padding: 5px 5vw; }
+  .site-header .full-header-logo { width: 62px; height: 70px; }
+  .site-header > .button { display: none; }
+  .site-header .menu-toggle { display: block; margin-left: auto; }
+  body.menu-open { overflow: hidden; }
+  body.menu-open .menu-toggle span:first-child { transform: translateY(3px) rotate(45deg); }
+  body.menu-open .menu-toggle span:last-child { transform: translateY(-4px) rotate(-45deg); }
+  #primary-navigation { position: fixed; z-index: 50; top: 82px; right: 0; left: 0; display: flex; height: calc(100vh - 82px); height: calc(100dvh - 82px); min-height: 0; padding: 24px 5vw; flex-direction: column; justify-content: flex-start; gap: 12px; overflow-y: auto; overscroll-behavior: contain; background: var(--black); color: var(--white); visibility: hidden; opacity: 0; pointer-events: none; transform: translateY(-10px); }
+  body.menu-open #primary-navigation { visibility: visible; opacity: 1; pointer-events: auto; transform: translateY(0); }
+  #primary-navigation a { flex: 0 0 auto; width: fit-content; font-size: clamp(26px, 5vw, 34px); letter-spacing: -.04em; }
+  #primary-navigation .nav-booking { display: inline-flex; margin-top: auto; padding: 16px 18px; background: var(--white); color: var(--black); font-size: 16px; letter-spacing: 0; }
+}
