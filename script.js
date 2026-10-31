@@ -123,8 +123,12 @@
       action: { href: 'https://www.google.com/maps/search/?api=1&query=Unit+203%2C+8268+120+Street%2C+Surrey%2C+BC+V3W+3N4', label: 'Get directions ↗', external: true }
     },
     services: {
-      text: 'We offer physiotherapy, dry needling / IMS, exercise therapy, cupping therapy and shockwave therapy. Your physiotherapist can discuss which options suit your needs.',
+      text: 'We offer physiotherapy, dry needling / IMS, exercise therapy, cupping therapy, shockwave therapy, and foot assessments with insoles and assessment-guided modifications. Call the clinic to discuss the options for your needs.',
       action: { href: '#services', label: 'Explore services' }
+    },
+    foot: {
+      text: 'We assess foot conditions and make insoles, with modifications based on your assessment and individual needs. Call (778) 998-1600 to discuss a foot assessment.',
+      action: { href: '/foot-assessment-insoles', label: 'Foot assessments & insoles' }
     },
     contact: {
       text: 'You can call us at (778) 998-1600 or email info.handsonphysio@gmail.com.',
@@ -142,6 +146,7 @@
   const respondToAssistant = (question) => {
     const value = question.toLowerCase();
     const key = /emergency|urgent|chest pain|suicid|severe/.test(value) ? 'emergency'
+      : /\bfoot\b|\bfeet\b|insole|orthotic/.test(value) ? 'foot'
       : /book|appointment|schedule|jane/.test(value) ? 'book'
       : /bill|benefit|insurance|coverage|claim/.test(value) ? 'billing'
       : /address|location|directions|parking|where/.test(value) ? 'location'

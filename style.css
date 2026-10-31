@@ -192,7 +192,7 @@ h1 { max-width: 100%; font-size: clamp(54px, 6.4vw, 104px); line-height: .96; }
 .start-booking { margin-top: 38px; }
 
 .services { background: #fff; color: var(--black); border-top: 1px solid var(--black); }
-.service-list { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.service-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .service-item { grid-template-columns: 1fr; min-height: 372px; padding: 30px; border: 1px solid var(--black); background: #fff; color: var(--black); }
 .service-index { font-size: 14px; }
 .service-icon { width: 62px; height: 62px; padding: 9px; border: 1px solid var(--black); border-radius: 50%; }
@@ -397,3 +397,8 @@ nav a:hover, nav a[aria-current="page"] { text-decoration: none; }
   .assistant-launch, .assistant-panel { transition: none; }
   .assistant-pulse::after { animation: none; }
 }
+
+/* New foot assessment service announcement. */
+.new-service { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; width: fit-content; margin: -8px 0 30px; padding: 12px 14px; border: 1px solid var(--black); background: var(--white); font-size: 14px; font-weight: 800; line-height: 1.5; text-decoration: none; }
+.new-service > span:first-child { font: 500 10px/1.4 "DM Mono", monospace; letter-spacing: .06em; text-transform: uppercase; }
+.new-service:hover { background: var(--black); color: var(--white); }

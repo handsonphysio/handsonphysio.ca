@@ -1,6 +1,6 @@
 # Optional website measurement
 
-All eight HTML pages load `measurement.css` and `measurement.js`. There is no build step. GitHub Pages publishes the repository root on `main` to handsonphysio.ca.
+All HTML pages load `measurement.css` and `measurement.js`. There is no build step. GitHub Pages publishes the repository root on `main` to handsonphysio.ca.
 
 The production Google Analytics web stream is `G-VLPZR721SK`, also installed through Jane's Google Analytics integration. Measurement uses basic consent mode: the Google script is loaded only after the visitor chooses **Allow measurement**. **No thanks** leaves it unloaded. Privacy choices can be reopened, and withdrawal clears this website's Google measurement cookies and reloads the page to unload the vendor.
 
